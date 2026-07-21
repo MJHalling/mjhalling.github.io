@@ -19,6 +19,9 @@
       font-family: 'Nunito Sans', sans-serif;
       background: linear-gradient(180deg, #461D7C 0%, #2F1354 100%);
       color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* HEADER */
@@ -28,61 +31,25 @@
     }
 
     .wordmark {
-      max-width: 460px;
+      max-width: 480px;
       display: block;
     }
 
-    /* HEXAGON SILKS */
-    .silks-wrapper {
-      width: 520px;
-      height: 450px;
-      margin: 60px auto 50px;
-      position: relative;
-    }
-
-    .silks-wrapper::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 520px;
-      height: 450px;
-      background: var(--white);
-      clip-path: polygon(
-        50% 0%,
-        90% 25%,
-        90% 75%,
-        50% 100%,
-        10% 75%,
-        10% 25%
-      );
-      z-index: 1;
-    }
-
-    .silks-wrapper img {
-      position: relative;
-      z-index: 2;
-      max-width: 360px;
-      top: 45px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* BODY TEXT */
-    .body-text {
+    /* MAIN CONTENT */
+    .content {
+      flex: 1;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 40px auto 0;
       padding: 0 30px;
+      text-align: justify;
       font-size: 1.25rem;
       line-height: 1.7;
-      text-align: justify;
     }
 
     /* CONTACT */
     .contact {
       max-width: 900px;
-      margin: 60px auto 100px;
+      margin: 40px auto 120px;
       padding: 0 30px;
       font-size: 1.15rem;
     }
@@ -100,29 +67,48 @@
       display: block;
       margin-top: 8px;
     }
+
+    /* SILKS SIGN-OFF */
+    .silks-signoff {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 260px;
+      height: 260px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    }
+
+    .silks-signoff img {
+      max-width: 180px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="wordmark.png" alt="Halling Thoroughbreds" class="wordmark">
+    <img src="secondary.jpg" alt="Halling Thoroughbreds" class="wordmark">
   </header>
 
-  <div class="silks-wrapper">
-    <img src="silks.png" alt="Halling Thoroughbreds Silks">
-  </div>
-
-  <p class="body-text">
+  <div class="content">
     Through racing partnerships, Halling Thoroughbreds has campaigned more than thirty horses,
     including five stakes winners and two Grade 1 winners. Based in Del Mar, our horses have
     competed across the country and around the world, with starts at Royal Ascot, Newmarket,
     Chantilly, Meydan, and three Breeders’ Cup appearances.
-  </p>
+  </div>
 
   <div class="contact">
     <div class="contact-title">Contact</div>
     <a href="mailto:cristy.halling@gmail.com">cristy.halling@gmail.com</a>
     <a href="mailto:mark.halling@gmail.com">mark.halling@gmail.com</a>
+  </div>
+
+  <div class="silks-signoff">
+    <img src="silks.png" alt="Halling Thoroughbreds Silks">
   </div>
 
 </body>
