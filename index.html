@@ -20,8 +20,6 @@
       background: linear-gradient(180deg, #461D7C 0%, #2F1354 100%);
       color: var(--white);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
     /* HEADER */
@@ -31,33 +29,40 @@
     }
 
     .wordmark {
-      max-width: 480px;
+      max-width: 460px;
       display: block;
     }
 
-    /* MAIN CONTENT */
-    .content {
-      flex: 1;
-      max-width: 900px;
-      margin: 40px auto 0;
-      padding: 0 30px;
-      text-align: justify;
-      font-size: 1.25rem;
-      line-height: 1.7;
+    /* MAIN CENTERED LOGO */
+    .main-logo {
+      display: block;
+      margin: 40px auto 40px;
+      max-width: 600px;
     }
 
-    /* CONTACT */
-    .contact {
+    /* BODY TEXT */
+    .body-text {
       max-width: 900px;
-      margin: 40px auto 120px;
+      margin: 0 auto;
       padding: 0 30px;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    /* CONTACT - BOTTOM LEFT */
+    .contact {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
       font-size: 1.15rem;
+      line-height: 1.6;
     }
 
     .contact-title {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
     }
 
     .contact a {
@@ -65,10 +70,9 @@
       text-decoration: none;
       font-weight: 600;
       display: block;
-      margin-top: 8px;
     }
 
-    /* SILKS SIGN-OFF */
+    /* SILKS SIGN-OFF - BOTTOM RIGHT */
     .silks-signoff {
       position: fixed;
       bottom: 30px;
@@ -91,10 +95,12 @@
 <body>
 
   <header>
-    <img src="secondary.jpg" alt="Halling Thoroughbreds" class="wordmark">
+    <img src="wordmark.png" alt="Halling Thoroughbreds" class="wordmark">
   </header>
 
-  <div class="content">
+  <img src="secondary.png" alt="Halling Thoroughbreds Logo" class="main-logo">
+
+  <div class="body-text">
     Through racing partnerships, Halling Thoroughbreds has campaigned more than thirty horses,
     including five stakes winners and two Grade 1 winners. Based in Del Mar, our runners have
     competed across the country and around the world, with starts at Royal Ascot, Newmarket,
